@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>VietCulture - Project by F5 Hackathoner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/vendor.css">
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="home.html"><span>Viet</span>Culture</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item "><a href="home.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="course.html" class="nav-link">Course</a></li>
+          <li class="nav-item"><a href="instructor.html" class="nav-link">Mentor</a></li>
+          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Book Store</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+        </ul>
+        <!-- Bọc icon và dropdown -->
+        <div id="cartContainer" style="position: relative; display: inline-block;">
+          <!-- Icon giỏ hàng -->
+          <a href="#" id="cartToggle">
+            <span class="material-symbols-outlined cart-icon" style="color: #fff; font-size: 32px;">
+              shopping_cart
+            </span>
+          </a>
+
+          <!-- Dropdown -->
+          <div id="cartDropdown" style="
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        background: white;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        width: 90vw;
+        max-width: 320px;
+        margin-top: 10px;
+        
+    ">
+            <h4 style="color: #4986fc;font-family: sans-serif;font-weight:bold;">Your Book <span class="badge"></span>
+            </h4>
+            <ul style="padding-left: 0; list-style: none; margin: 0;">
+              <li
+                style="margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 6px; display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                  <strong>Culture of Vietnam</strong><br>
+                  <small>High quality in good price.</small>
+                </div>
+                <span style="color: #4986fc;">$870</span>
+              </li>
+              <li
+                style="margin-bottom: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 6px; display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                  <strong>Diary of a cricket</strong><br>
+                  <small>Professional Quest for the Lost City.</small>
+                </div>
+                <span style="color: #4986fc;">$600</span>
+              </li>
+              <!-- Total -->
+              <li
+                style="margin-top: 10px; padding: 10px; border-top: 2px dashed #ccc; display: flex; justify-content: space-between; align-items: center; font-weight: bold;">
+                <span>Total</span>
+                <span style="color: #4986fc;">$1470</span>
+              </li>
+            </ul>
+
+
+            <div style="margin-top: 10px;">
+              <button class="btn-dark"
+                style="width: 100%; padding: 10px;border-radius:50px 50px ; /* hoặc 9999px nếu bạn muốn bo tròn mạnh hơn */;">View
+                Cart</button>
+              <button class="btn-pink"
+                style="width: 100%; padding: 10px;  color: #fff; margin-top: 5px;border-radius:50px 50px">Go
+                to Checkout</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Script toggle -->
+        <script>
+          const toggle = document.getElementById('cartToggle');
+          const dropdown = document.getElementById('cartDropdown');
+
+          toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+          });
+
+          document.addEventListener('click', function (e) {
+            if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+              dropdown.style.display = 'none';
+            }
+          });
+
+          const cartIcon = document.querySelector('.cart-icon');
+
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+              cartIcon.classList.add('scrolled');
+            } else {
+              cartIcon.classList.remove('scrolled');
+            }
+          });
+        </script>
+
+        </script>
+
+
+
+
+
+      </div>
+    </div>
+
+  </nav>
+  <!-- END nav -->
+
+  <section class="hero-wrap hero-wrap-2" style="background-image: url('images/a16.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-end justify-content-center">
+        <div class="col-md-9 ftco-animate pb-5 text-center">
+          <p class="breadcrumbs"><span class="mr-2"><a href="home.html">Home <i
+                  class="fa fa-chevron-right"></i></a></span> <span class="mr-2"><a href="home.html">Blog <i
+                  class="fa fa-chevron-right"></i></a></span> <span>Blog Single <i
+                class="fa fa-chevron-right"></i></span></p>
+          <h1 class="mb-0 bread">Our Blog</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section ftco-no-pt ftco-no-pb">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ftco-animate py-md-5 mt-md-5">
+          <h2 class="mb-3">A Perfect Time to Learn Vietnamese Culture</h2>
+          <p>Tet (Tết Nguyên Đán) is Vietnam's Lunar New Year, and it’s much more than just a holiday—it’s a deep,
+            emotional
+            journey into family, history, and tradition. For language learners, it’s a golden opportunity to not only
+            expand
+            vocabulary but to truly feel the rhythm of Vietnamese culture.</p>
+          <p>
+            <img src="images/blog1.avif" alt="" class="img-fluid">
+          </p>
+          <p>Last year, I hosted an online Tet-themed Vietnamese lesson with learners from five countries. We decorated
+            our
+            virtual classroom with images of peach blossoms and red envelopes (bao lì xì). One student from Canada said,
+            “This is better than any textbook!” I couldn’t agree more.
+            We even practiced how to wish elders and friends a happy new year using the right tones and gestures. It was
+            both
+            educational and full of laughter.</p>
+          <h2 class="mb-3 mt-5">Culture Comes Alive Through Food and Language Tip</h2>
+          <p>One of the highlights for my students was learning about traditional Tet foods. I encouraged everyone to
+            try
+            making bánh chưng or at least watching a video of how it’s made. The stories behind these dishes brought
+            language
+            and culture together in a meaningful way.</p>
+          <p>
+            <img src="images/bg_1.jpg" alt="" class="img-fluid">
+          </p>
+          <p>During Tet, people often use formal, polite expressions. It's a perfect time to practice the “chúc”
+            structure (to wish someone something), such as:
+            Chúc bạn sức khỏe và hạnh phúc! – Wishing you health and happiness!</p>
+          <div class="tag-widget post-tag-container mb-5 mt-5">
+            <div class="tagcloud">
+              <a href="#" class="tag-cloud-link">Life</a>
+              <a href="#" class="tag-cloud-link">Sport</a>
+              <a href="#" class="tag-cloud-link">Tech</a>
+              <a href="#" class="tag-cloud-link">Travel</a>
+            </div>
+          </div>
+
+          <div class="about-author d-flex p-4 bg-light">
+            <div class="bio mr-5">
+              <img src="images/avt3.jpg" alt="Image placeholder" class="img-fluid mb-4">
+            </div>
+            <div class="desc">
+              <h3>Sophia Clark</h3>
+              <p>Tet was the first time I felt like I truly connected with Vietnam. Watching
+                lion dances and learning how to say "Chúc Mừng Năm Mới" was unforgettable!</p>
+            </div>
+          </div>
+
+
+          <div class="pt-5 mt-5">
+            <h3 class="mb-5" style="font-size: 20px; font-weight: bold;">6 Comments</h3>
+            <ul class="comment-list">
+              <li class="comment">
+                <div class="vcard bio">
+                  <img src="images/avt2.jpg" alt="Image placeholder">
+                </div>
+                <div class="comment-body">
+                  <h3>John Doe</h3>
+                  <div class="meta">September 17, 2024 at 2:21pm</div>
+                  <p>Learning about Tet was such a beautiful experience. My students
+                    loved making paper peach blossoms and learning new Vietnamese words together</p>
+                  <p><a href="#" class="reply">Reply</a></p>
+                </div>
+              </li>
+
+              <li class="comment">
+                <div class="vcard bio">
+                  <img src="images/avt1.avif" alt="Image placeholder">
+                </div>
+                <div class="comment-body">
+                  <h3>Yuki Tanaka</h3>
+                  <div class="meta">September 17, 2024 at 6:05pm</div>
+                  <p>I joined the Tet online class and practiced traditional greetings. My Vietnamese
+                    roommate was really impressed when I said ‘Chúc Mừng Năm Mới!’ the right way!</p>
+                  <p><a href="#" class="reply">Reply</a></p>
+                </div>
+
+                <ul class="children">
+                  <li class="comment">
+                    <div class="vcard bio">
+                      <img src="images/avt4.jpg" alt="Image placeholder">
+                    </div>
+                    <div class="comment-body">
+                      <h3>Rajiv Patel</h3>
+                      <div class="meta">September 18, 2024 at 9:18am</div>
+                      <p>This article reminded me of my trip to Vietnam during Tet. I tried banh chung
+                        for the first time—so delicious and rich in culture!</p>
+                      <p><a href="#" class="reply">Reply</a></p>
+                    </div>
+
+
+                    <ul class="children">
+                      <li class="comment">
+                        <div class="vcard bio">
+                          <img src="images/avt5.jpg" alt="Image placeholder">
+                        </div>
+                        <div class="comment-body">
+                          <h3>Max Bauer</h3>
+                          <div class="meta">September 18, 2024 at 10:43am</div>
+                          <p>What a lovely way to discover Vietnamese traditions. I didn’t expect
+                            Tet to be so warm and full of meaning. I loved the family atmosphere!</p>
+                          <p><a href="#" class="reply">Reply</a></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="comment">
+                <div class="vcard bio">
+                  <img src="images/avt6.jpg" alt="Image placeholder">
+                </div>
+                <div class="comment-body">
+                  <h3>Emma John</h3>
+                  <div class="meta">September 18, 2024 at 4:50pm</div>
+                  <p>Thanks for this post! I always wanted to understand
+                    Tet beyond the lion dances. Now I feel more confident joining my colleagues’ Tet gatherings.</p>
+                  <p><a href="#" class="reply">Reply</a></p>
+                </div>
+              </li>
+            </ul>
+            <!-- END comment-list -->
+
+            <div class="comment-form-wrap pt-5">
+              <h3 class="mb-5" style="font-size: 20px; font-weight: bold;">Leave a comment</h3>
+              <form action="#" class="p-5 bg-light">
+                <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                  <label for="website">Website</label>
+                  <input type="url" class="form-control" id="website">
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div> <!-- .col-md-8 -->
+        <div class="col-lg-4 sidebar ftco-animate pl-md-4 py-md-5">
+          <div class="sidebar-box mt-md-5 bg-light">
+            <form action="#" class="search-form">
+              <div class="form-group">
+                <span class="icon fa fa-search"></span>
+                <input type="text" class="form-control" placeholder="Search...">
+              </div>
+            </form>
+          </div>
+          <div class="sidebar-box ftco-animate">
+            <div class="categories">
+              <h3>Services</h3>
+              <li><a href="#">Top Quality Content <span>(12)</span></a></li>
+              <li><a href="#">Highly Skilled Instructor <span>(22)</span></a></li>
+              <li><a href="#">World Class &amp; Quiz <span>(37)</span></a></li>
+              <li><a href="#">Get Certified <span>(42)</span></a></li>
+            </div>
+          </div>
+
+          <div class="sidebar-box ftco-animate">
+            <h3>Recent Blog</h3>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/a13.avif);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">Tips from learners who mastered the 6 tones with songs, stories, and
+                    practice</a>
+                </h3>
+                <div class="meta">
+                  <div><a href="#"><span class="fa fa-calendar"></span> Sept. 17, 2024</a></div>
+                  <div><a href="#"><span class="fa fa-user"></span> User</a></div>
+                  <div><a href="#"><span class="fa fa-comment"></span> 19</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/a3.jpg);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">From street food to family dinners – here’s what caught me off guard</a>
+                </h3>
+                <div class="meta">
+                  <div><a href="#"><span class="fa fa-calendar"></span> April. 5, 2023</a></div>
+                  <div><a href="#"><span class="fa fa-user"></span> User</a></div>
+                  <div><a href="#"><span class="fa fa-comment"></span> 27</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/a12.avif);"></a>
+              <div class="text">
+                <h3 class="heading"><a href="#">Why Vietnamese cafés are the perfect place to study and meet locals</a>
+                </h3>
+                <div class="meta">
+                  <div><a href="#"><span class="fa fa-calendar"></span> Aug. 30, 2023</a></div>
+                  <div><a href="#"><span class="fa fa-user"></span> User</a></div>
+                  <div><a href="#"><span class="fa fa-comment"></span> 8</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-box ftco-animate">
+            <h3>Tag Cloud</h3>
+            <div class="tagcloud">
+              <a href="#" class="tag-cloud-link">design</a>
+              <a href="#" class="tag-cloud-link">learn</a>
+              <a href="#" class="tag-cloud-link">education</a>
+              <a href="#" class="tag-cloud-link">course</a>
+              <a href="#" class="tag-cloud-link">online</a>
+              <a href="#" class="tag-cloud-link">bag</a>
+              <a href="#" class="tag-cloud-link">pen</a>
+              <a href="#" class="tag-cloud-link">teacher</a>
+            </div>
+          </div>
+
+          <div class="sidebar-box ftco-animate">
+            <h3>Paragraph</h3>
+            <p>Learning Vietnamese opens the door to a rich
+              culture filled with unique traditions, warm hospitality,
+              and beautiful language. Whether you're here to travel, live,
+              or connect with Vietnamese friends, every word you learn brings
+              you closer to the heart of Vietnam!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section> <!-- .section -->
+
+  <footer class="ftco-footer ftco-no-pt">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">About</h2>
+            <p>Step into a wold where every sound sing a story,every word carries a smile, and every lesson is a gateway
+              to culture, connection, and curiosity.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+              <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+            <h2 class="ftco-heading-2">Help Desk</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Customer Care</a></li>
+              <li><a href="#" class="py-2 d-block">Legal Help</a></li>
+              <li><a href="#" class="py-2 d-block">Services</a></li>
+              <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
+              <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
+              <li><a href="#" class="py-2 d-block">Call Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Recent Courses</h2>
+            <ul class="list-unstyled">
+              <li><a href="#" class="py-2 d-block">Getting Started</a></li>
+              <li><a href="#" class="py-2 d-block">Daily Communication</a></li>
+              <li><a href="#" class="py-2 d-block">Life & Family</a></li>
+              <li><a href="#" class="py-2 d-block">Culture & Cuisine</a></li>
+              <li><a href="#" class="py-2 d-block">Travel & Directions</a></li>
+              <li><a href="#" class="py-2 d-block">Study & Work Life</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md pt-5">
+          <div class="ftco-footer-widget pt-md-5 mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon fa fa-map-marker"></span><span class="text">Minh Khai Ward, Bac Tu Liem District,
+                    Hanoi City, Vietnam</span></li>
+                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+84 373 406 840</span></a></li>
+                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span
+                      class="text">info@vietculture.com.vn</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Hackathoner can't be removed. Template is licensed under CC BY 3.0. -->
+            Hackathoner &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This project is made with
+            <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://Hackathoner.com"
+              target="_blank">F5 Hackathoner</a>
+            <!-- Link back to Hackathoner can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Chatbot Bubble -->
+  <div class="chatbot-widget">
+    <div class="chat-header">
+      <span>VietCulture 🤖🗨️ </span>
+      <span class="chat-close">×</span>
+    </div>
+    <div class="chat-body">
+      <div class="chat-msg bot">Hi there! 👋<br>We'd love to hear about your recent experience. How was it for
+        you?</div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Write your message..." />
+      <button id="chat-send">➡️</button>
+    </div>
+  </div>
+  <div class="chat-launcher">🤖</div>
+
+</body>
+<script>
+  const launcher = document.querySelector('.chat-launcher');
+  const widget = document.querySelector('.chatbot-widget');
+  const closeBtn = document.querySelector('.chat-close');
+  const input = document.getElementById('chat-input');
+  const sendBtn = document.getElementById('chat-send');
+  const body = document.querySelector('.chat-body');
+
+  launcher.onclick = () => {
+    widget.style.display = 'flex';
+    launcher.style.display = 'none';
+  };
+
+  closeBtn.onclick = () => {
+    widget.style.display = 'none';
+    launcher.style.display = 'block';
+  };
+
+  sendBtn.onclick = sendMessage;
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") sendMessage();
+  });
+
+  function sendMessage() {
+    const msg = input.value.trim();
+    if (!msg) return;
+    addMessage("user", msg);
+    input.value = "";
+
+    setTimeout(() => {
+      const reply = getBotReply(msg);
+      addMessage("bot", reply);
+    }, 600);
+  }
+
+  function addMessage(sender, text) {
+    const msgDiv = document.createElement("div");
+    msgDiv.className = `chat-msg ${sender}`;
+    msgDiv.innerHTML = text;
+    body.appendChild(msgDiv);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function getBotReply(input) {
+    input = input.toLowerCase();
+    if (input.includes("hi") || input.includes("hello") || input.includes("chào")) {
+      return "Hello! How can I assist you today?";
+    }
+    if (input.includes("help") || input.includes("trợ giúp")) {
+      return "Sure! You can ask me about creating your own assistant or using it on your website.";
+    }
+    return "I'm not sure I understand. Could you rephrase that?";
+  }
+</script>
+
+</html>
